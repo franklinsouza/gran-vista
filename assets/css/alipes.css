@@ -4587,6 +4587,7 @@ ul {
   font-weight: 500;
   line-height: 26px;
   color: #7a736a;
+  text-align: center;
 }
 
 .site-footer__bottom-text a {
@@ -5215,7 +5216,7 @@ ul {
 .apartment-two {
   position: relative;
   display: block;
-  padding: 120px 0 90px;
+  padding: 120px 0 50px;
   z-index: 1;
 }
 
@@ -5725,7 +5726,7 @@ ul {
 .cta-one {
   position: relative;
   display: block;
-  padding: 0 0 120px;
+  padding: 0 0 50px;
   z-index: 1;
 }
 
@@ -12006,7 +12007,7 @@ ul {
 .gallery-carousel-page {
   position: relative;
   display: block;
-  padding: 100px 0 140px;
+  padding: 50px 0 140px;
 }
 
 .gallery-carousel-page .team-one__single {
