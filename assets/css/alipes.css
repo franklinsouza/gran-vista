@@ -11896,15 +11896,12 @@ ul {
 
 
 .carousel-dot-style.owl-carousel .owl-dots {
-  position: absolute;
-  bottom: -62px;
-  left: 0px;
-  right: 0px;
   text-align: center;
-  margin: 0 !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
 
 .carousel-dot-style.owl-carousel .owl-dots .owl-dot {
@@ -11918,6 +11915,7 @@ ul {
   padding: 0px;
   transition: all 100ms linear;
   transition-delay: 0.1s;
+  flex-shrink: 0;
 }
 
 .carousel-dot-style.owl-carousel .owl-dot.active {
