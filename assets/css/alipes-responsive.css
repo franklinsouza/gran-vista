@@ -724,7 +724,11 @@
     }
 
     .about-two__year {
-        left: 19px;
+        left: initial;
+        top: -15px;
+        bottom: initial;
+        padding: 14px 30px;
+        right: 0;
     }
 
     .about-two__left {

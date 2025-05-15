@@ -4773,11 +4773,11 @@ ul {
 .about-two__year {
   position: absolute;
   bottom: 65px;
-  left: -89px;
+  left: -45px;
   background-color: var(--alipes-black);
   max-width: 242px;
   width: 100%;
-  padding: 25px 32px 31px;
+  padding: 25px 32px;
   z-index: 1;
 }
 
@@ -4814,10 +4814,10 @@ ul {
 }
 
 .about-two__year h3 {
-  font-size: 60px;
+  font-size: 30px;
   font-weight: 400;
   color: var(--alipes-white);
-  line-height: 60px;
+  line-height: 35px;
 }
 
 .about-two__year p {
@@ -5779,12 +5779,12 @@ ul {
 }
 
 .cta-one__title {
-  font-size: 40px;
+  font-size: 39px;
   font-weight: 500;
   color: var(--alipes-white);
   line-height: 48px;
   text-transform: uppercase;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 
 .cta-one__btn-box {
@@ -5806,10 +5806,10 @@ ul {
 }
 
 .cta-one__text {
-  max-width: 241px;
+  max-width: 430px;
   width: 100%;
   color: #fff2ea;
-  margin-top: -2px;
+  margin-bottom: 30px;
 }
 
 /*--------------------------------------------------------------
@@ -12041,4 +12041,34 @@ body.boxed-wrapper {
   background-position: top right;
   display: flex;
   align-items: center;
+}
+
+.whats-btn {
+    background-color: #00a884;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10000;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.pulse {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
