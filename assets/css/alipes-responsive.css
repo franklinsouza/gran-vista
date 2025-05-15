@@ -1205,6 +1205,10 @@
     .apartment-details-two__shape-1 {
         top: 0;
     }
+
+    .main-slider-two .container-fluid {
+        padding: 140px 30px 10px;
+    }
 }
 
 @media only screen and (max-width: 1199px) {
