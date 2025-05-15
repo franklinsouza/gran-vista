@@ -1490,6 +1490,7 @@ ul {
 }
 
 .main-menu-two__wrapper {
+  background-color: transparent;
   position: relative;
   display: block;
   padding: 0 60px;
@@ -1524,7 +1525,7 @@ ul {
 
 .main-menu-two__logo {
   display: block;
-  padding: 30.5px 0;
+  padding: 17px 0;
   margin-right: 290px;
 }
 
@@ -1987,23 +1988,8 @@ ul {
   padding-bottom: 261px;
   z-index: 30;
 }
-
-.image-layer-two {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left center;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: opacity 1500ms ease-in, -webkit-transform 7000ms ease;
-  transition: opacity 1500ms ease-in, -webkit-transform 7000ms ease;
-  transition: transform 7000ms ease, opacity 1500ms ease-in;
-  transition: transform 7000ms ease, opacity 1500ms ease-in, -webkit-transform 7000ms ease;
-  z-index: 1;
+.main-slider-two .container-fluid {
+  padding: 140px 60px 10px;
 }
 
 .main-slider-two .swiper-slide-active .image-layer-two {
@@ -2011,14 +1997,15 @@ ul {
   transform: scale(1.15);
 }
 
-.image-layer-two:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  content: "";
-  background-color: rgba(26, 21, 14, .70);
+.main-slider-two:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background-color: rgba(26, 21, 14, .60);
+    display: none;
 }
 
 .main-slider-two__shape-1 {
@@ -2050,7 +2037,6 @@ ul {
 .main-slider-two__content {
   position: relative;
   display: block;
-  text-align: center;
 }
 
 .main-slider-two__title {
@@ -4706,14 +4692,14 @@ ul {
 }
 
 .about-two .section-title {
-  margin-bottom: 26px;
+  margin-bottom: 15px;
 }
 
 .about-two__points-list {
   position: relative;
   display: block;
-  margin-top: 36px;
-  margin-bottom: 45px;
+  margin-top: 22px;
+  margin-bottom: 40px;
 }
 
 .about-two__points-list li {
@@ -4852,7 +4838,7 @@ ul {
   position: relative;
   display: block;
   background-color: var(--alipes-base);
-  padding: 21px 60px 23px;
+  padding: 20px 50px 23px;
 }
 
 .about-two__counter li {
@@ -4868,8 +4854,8 @@ ul {
 .about-two__count-box {
   position: relative;
   display: block;
-  padding-bottom: 30px;
-  padding-top: 36px;
+  padding-bottom: 25px;
+  padding-top: 29px;
 }
 
 .about-two__count-box h3 {
@@ -5254,7 +5240,7 @@ ul {
   z-index: 1;
 }
 
-.apartment-two__single:hover .apartment-two__img:before {
+/* .apartment-two__single:hover .apartment-two__img:before {
   -webkit-transform: perspective(400px) rotateX(0deg) scaleY(1.0);
   -ms-transform: perspective(400px) rotateX(0deg) scaleY(1.0);
   transform: perspective(400px) rotateX(0deg) scaleY(1.0);
@@ -5262,7 +5248,7 @@ ul {
   transition-timing-function: ease-in-out;
   transition-duration: .7s;
   transition-property: all;
-}
+} */
 
 .apartment-two__img img {
   width: 100%;
@@ -5334,6 +5320,9 @@ ul {
   text-transform: uppercase;
   font-family: var(--alipes-font-two);
   letter-spacing: var(--alipes-letter-spacing);
+}
+.apartment-two__sub-title:hover {
+  color: var(--alipes-base);
 }
 
 /*--------------------------------------------------------------
@@ -5731,12 +5720,19 @@ ul {
 }
 
 .cta-one__inner {
+  background-image: url('../images/granvista/banner-azevedo.webp');
+  background-size: cover;
+  background-color: #022353;
   position: relative;
   display: block;
-  background-color: var(--alipes-base);
   padding: 93px 0 100px;
   overflow: hidden;
   z-index: 1;
+}
+
+.cta-one .thm-btn{
+ background-color: #ebebeb;
+ color: #022353;
 }
 
 .cta-one__shape-1 {
@@ -5775,6 +5771,7 @@ ul {
   position: relative;
   display: block;
   margin-left: 100px;
+  padding-right: 0;
 }
 
 .cta-one__title {
@@ -12027,4 +12024,17 @@ body.boxed-wrapper {
   background-color: #fff;
   -webkit-box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.08);
   box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.08);
+}
+
+/*--------------------------------------------------------------
+# CUSTOM CLASSES
+--------------------------------------------------------------*/
+.hero {
+  height: 100vh;
+  background-image: url('../images/granvista/banner.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  display: flex;
+  align-items: center;
 }

@@ -225,38 +225,7 @@
     .billing_title h2 {
         font-size: 33px;
     }
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -551,40 +520,7 @@
     .page-header__overly {
         top: 0;
     }
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Mobile Layout: 320px. */
@@ -1197,41 +1133,10 @@
     .page-header__inner {
         padding: 286px 0 183px;
     }
-
-
-
-
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media only screen and (min-width: 1200px) and (max-width: 1442px) {}
-
-
 
 
 /*--------------------------------------------------------------
@@ -1243,8 +1148,6 @@
         margin-top: 45px;
     }
 }
-
-
 
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1264,7 +1167,6 @@
         top: 0;
     }
 }
-
 
 
 @media only screen and (max-width: 767px) {
@@ -1305,12 +1207,21 @@
     }
 }
 
+@media only screen and (max-width: 1199px) {
+    .main-slider-two:before{
+        display: block;
+    }
 
+    .main-menu-two__wrapper {
+        background-color: #252020;
+    }
+
+    .cta-one__left {
+        padding-right: 60px;
+    }
+}
 
 @media only screen and (min-width: 1200px) and (max-width: 1449px) {}
-
-
-
 
 
 /*--------------------------------------------------------------
@@ -1326,8 +1237,6 @@
         color: var(--alipes-black);
     }
 }
-
-
 
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1424,16 +1333,11 @@
 }
 
 
-
-
 @media only screen and (min-width: 1375px) and (max-width: 1575px) {
     .main-menu-two__logo {
         margin-right: 90px;
     }
 }
-
-
-
 
 
 @media only screen and (min-width: 1200px) and (max-width: 1374px) {
@@ -1449,9 +1353,6 @@
         margin-right: 0;
     }
 }
-
-
-
 
 
 @media only screen and (min-width: 1200px) and (max-width: 1320px) {
