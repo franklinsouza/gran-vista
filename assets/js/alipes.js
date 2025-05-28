@@ -344,9 +344,9 @@
         },
       },
       messages: {
-        nome: "Por favor, insira seu nome.",
+        name: "Por favor, insira seu nome.",
         email: "Insira um e-mail válido.",
-        tel_celular: "Insira um telefone válido.",
+        phone: "Insira um telefone válido.",
       },
       submitHandler: function (form, event) {
         event.preventDefault();
