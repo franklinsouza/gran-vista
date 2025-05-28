@@ -330,7 +330,7 @@
   if ($(".contact-form-validated").length) {
     $(".contact-form-validated").validate({
       rules: {
-        nome: {
+        name: {
           required: true,
           minlength: 2
         },
@@ -338,7 +338,7 @@
           required: true,
           email: true
         },
-        tel_celular: {
+        phone: {
           required: true,
           minlength: 8
         },
