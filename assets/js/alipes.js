@@ -322,40 +322,73 @@
     });
   }
 
+  //
+
+
+  //$('[name="tel_celular"]').mask('(00) 00000-0000');
 
   if ($(".contact-form-validated").length) {
     $(".contact-form-validated").validate({
       // initialize the plugin
       rules: {
-        name: {
-          required: true
+        nome: {
+          required: true,
+          minlength: 2
         },
         email: {
           required: true,
           email: true
         },
-        phone: {
-          required: true
-        }
+        tel_celular: {
+          required: true,
+          minlength: 8
+        },
       },
       messages: {
-        name: "O campo Nome é obrigatório.",
-        email: "O campo E-mail é obrigatório.",
-        phone: "O campo Whatsapp é obrigatório"
+        nome: "Por favor, insira seu nome.",
+        email: "Insira um e-mail válido.",
+        tel_celular: "Insira um telefone válido.",
       },
-      submitHandler: function (form) {
-        // sending value with ajax request
-        $.post(
-          $(form).attr("action"),
-          $(form).serialize(),
-          function (response) {
-            $(form).parent().find(".result").append(response);
-            $(form).find('input[type="text"]').val("");
-            $(form).find('input[type="email"]').val("");
-            $(form).find("textarea").val("");
-          }
-        );
-        return false;
+      submitHandler: function (form, event) {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        
+        const payload = {
+          data: {
+            type: "lead",
+            attributes: {
+              source: "Landing Page",
+              name: data.name,
+              phone: data.phone,
+              email: data.email,
+            },
+          },
+        };
+
+        console.log(data);
+
+        fetch('/api/send/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload)
+        })
+        .then(res => {
+          if (!res.ok){
+            throw new Error('Erro ao enviar');
+          } 
+          
+          return res.json();
+        })
+        .then(response => {
+          form.reset();
+        })
+        .catch(err => {
+          console.error(err);
+        });        
       }
     });
   }
