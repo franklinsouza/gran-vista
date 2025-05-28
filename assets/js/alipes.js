@@ -372,7 +372,6 @@
           },
         };
 
-
         fetch('/api/send/', {
           method: 'POST',
           headers: {
