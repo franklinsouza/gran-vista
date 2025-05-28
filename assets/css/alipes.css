@@ -12072,3 +12072,18 @@ body.boxed-wrapper {
     transform: scale(1);
   }
 }
+
+.form-msg {
+  text-align: center;
+  color: #FFF;
+  padding: 9px 10px;
+  max-width: 490px;
+  margin: 0 auto;
+}
+
+.form-msg.success {
+  background-color: #00a884;
+}
+.form-msg.error {
+  background-color: #e95c5c;
+}

@@ -325,11 +325,10 @@
   //
 
 
-  //$('[name="tel_celular"]').mask('(00) 00000-0000');
+  $('[name="phone"]').mask('(00) 00000-0000');
 
   if ($(".contact-form-validated").length) {
     $(".contact-form-validated").validate({
-      // initialize the plugin
       rules: {
         nome: {
           required: true,
@@ -351,10 +350,16 @@
       },
       submitHandler: function (form, event) {
         event.preventDefault();
+        $('.contact-page__btn').prop("disabled", true);
+        $('.contact-page__btn').text('Enviando...');
 
+        let msg = $('.form-msg');
         const formData = new FormData(form);
         const data = Object.fromEntries(formData);
+
         
+        msg.removeClass('success error').text('');
+
         const payload = {
           data: {
             type: "lead",
@@ -367,7 +372,6 @@
           },
         };
 
-        console.log(data);
 
         fetch('/api/send/', {
           method: 'POST',
@@ -384,10 +388,19 @@
           return res.json();
         })
         .then(response => {
-          form.reset();
+          if( response.success ){
+            form.reset();
+            msg.addClass('success').text('Formulário enviado com sucesso.');
+          }else {
+            msg.addClass('error').text('Erro ao enviar o formulário.');
+          }
         })
         .catch(err => {
           console.error(err);
+          msg.addClass('error').text('Erro ao enviar o formulário.');
+        }).finally(function () {
+          $('.contact-page__btn').prop("disabled", false);
+          $('.contact-page__btn').text('Enviar');
         });        
       }
     });
